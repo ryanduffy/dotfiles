@@ -4,6 +4,8 @@
 
 # Added much better colors and removed a bunch of crap. https://github.com/vocino/dotfiles
 
+default_username='Travis'
+
 COLOR_WHITE="\033[1;37m"
 COLOR_BLUE="\033[0;34m"
 COLOR_GREEN="\033[0;32m"
@@ -32,5 +34,11 @@ function parse_git_branch() {
 	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
 }
 
-export PS1="\[$COLOR_BLUE\]\u \[$COLOR_WHITE\]at \[$COLOR_BLUE\]\h \[$COLOR_WHITE\]in \[$COLOR_GREEN\]\w\[$COLOR_WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$COLOR_PURPLE\]\$(parse_git_branch)\[$COLOR_WHITE\]\n\$ \[$RESET\]"
-export PS2="\[$COLOR_RED\]→ \[$RESET\]"
+function usernamehost() {
+	if [ $USER != $default_username ]; then echo "${COLOR_BLUE}$USER ${COLOR_WHITE}at ${COLOR_BLUE}$HOSTNAME ${COLOR_WHITE}in "; fi
+}
+
+# export PS1="\[$COLOR_BLUE\]\u \[$COLOR_WHITE\]at \[$COLOR_BLUE\]\h \[$COLOR_WHITE\]in \[$COLOR_GREEN\]\w\[$COLOR_WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$COLOR_PURPLE\]\$(parse_git_branch)\[$COLOR_WHITE\]\n\$ \[$RESET\]"
+# export PS2="\[$COLOR_RED\]→ \[$RESET\]"
+
+export PS1="\[\e]2;$PWD\[\a\]\[\e]1;\]$(basename "$(dirname "$PWD")")/\W\[\a\]${BOLD}\$(usernamehost)\[$COLOR_BLUE\]\w\[$COLOR_WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$COLOR_PURPLE\]\$(parse_git_branch)\[$COLOR_WHITE\]\n\$ \[$RESET\]"
