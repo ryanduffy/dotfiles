@@ -1,14 +1,21 @@
-# Compiled Python files
-*.pyc
-
 # Folder view configuration files
 .DS_Store
 Desktop.ini
+.AppleDouble
+.LSOverride
+Icon
 
-# Thumbnail cache files
+# Thumbnails
 ._*
-Thumbs.db
 
-# Files that might appear on external disks
+# Files that might appear on external disk
 .Spotlight-V100
 .Trashes
+
+# Sass
+*.sass-cache
+
+# Textmate
+*.tmproj
+*.tmproject
+tmtags
