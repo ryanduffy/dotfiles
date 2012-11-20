@@ -39,6 +39,6 @@ function usernamehost() {
 }
 
 # export PS1="\[$COLOR_BLUE\]\u \[$COLOR_WHITE\]at \[$COLOR_BLUE\]\h \[$COLOR_WHITE\]in \[$COLOR_GREEN\]\w\[$COLOR_WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$COLOR_PURPLE\]\$(parse_git_branch)\[$COLOR_WHITE\]\n\$ \[$RESET\]"
-# export PS2="\[$COLOR_RED\]→ \[$RESET\]"
 
-export PS1="\[\e]2;$PWD\[\a\]\[\e]1;\]$(basename "$(dirname "$PWD")")/\W\[\a\]${BOLD}\$(usernamehost)\[$COLOR_BLUE\]\w\[$COLOR_WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$COLOR_PURPLE\]\$(parse_git_branch)\[$COLOR_WHITE\]\n\$ \[$RESET\]"
+export PS1="\[\e]2;$PWD\[\a\]\[\e]1;\]$(basename "$(dirname "$PWD")")/\W\[\a\]${BOLD}\$(usernamehost)\[$COLOR_BLUE\]\w\[$COLOR_GRAY\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$COLOR_PURPLE\]\$(parse_git_branch)\[$COLOR_GRAY\]\n\$ \[$RESET\]"
+export PS2="\[$COLOR_RED\]→ \[$RESET\]"
