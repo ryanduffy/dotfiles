@@ -1,9 +1,9 @@
-# Make vim the default editor
-export EDITOR="vim"
+# Make Textmate the default editor
+export EDITOR="mate"
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
 # Highlight section titles in manual pages
-export LESS_TERMCAP_md="$ORANGE"
+export LESS_TERMCAP_md="$COLOR_YELLOW"
 
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768
