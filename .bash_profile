@@ -4,10 +4,8 @@ export PATH="$HOME/.rvm/bin:$PATH"
 # Git Author Info
 GIT_AUTHOR_NAME="Travis Vocino"
 GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
-git config --global user.name "$GIT_AUTHOR_NAME"
 GIT_AUTHOR_EMAIL="travis@vocino.com"
 GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
-git config --global user.email "$GIT_AUTHOR_EMAIL"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
