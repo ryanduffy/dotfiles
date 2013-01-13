@@ -4,7 +4,7 @@
 
 # Added much better colors and removed a bunch of crap. https://github.com/vocino/dotfiles
 
-default_username='Travis'
+default_username='Ryan'
 
 COLOR_WHITE="\033[1;37m"
 COLOR_BLUE="\033[0;34m"

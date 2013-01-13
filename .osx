@@ -150,7 +150,7 @@ defaults write NSGlobalDomain AppleMeasurementUnits -string "Inches"
 defaults write NSGlobalDomain AppleMetricUnits -bool false
 
 # Set the timezone; see `systemsetup -listtimezones` for other values
-systemsetup -settimezone "America/Los_Angeles" > /dev/null
+systemsetup -settimezone "Canada/Toronto" > /dev/null
 
 # Enable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool true
@@ -422,10 +422,10 @@ defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\\U21a9"
 defaults write com.apple.terminal StringEncodings -array 4
 
 # Use a modified version of the IR Black theme by default in Terminal.app
-open "$HOME/Development/dotfiles/init/Vocino.terminal"
+open "$HOME/Development/dotfiles/init/Ryan.terminal"
 sleep 1 # Wait a bit to make sure the theme is loaded
-defaults write com.apple.terminal "Default Window Settings" -string "Vocino"
-defaults write com.apple.terminal "Startup Window Settings" -string "Vocino"
+defaults write com.apple.terminal "Default Window Settings" -string "Ryan"
+defaults write com.apple.terminal "Startup Window Settings" -string "Ryan"
 
 # Enable “focus follows mouse” for Terminal.app and all X11 apps
 # i.e. hover over a window and start typing in it without clicking first
