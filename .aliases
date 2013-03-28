@@ -21,6 +21,9 @@ alias s="subl ."
 alias o="open"
 alias oo="open ."
 alias cw="compass watch"
+alias ddply="dandelion deploy"
+alias dstat="dandelion status"
+alias apf="sudo kill `ps -ax | grep 'coreaudiod' | grep 'sbin' |awk '{print $1}'`"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`

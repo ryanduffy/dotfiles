@@ -15,7 +15,11 @@ Icon
 # Sass
 *.sass-cache
 
-# Textmate
-*.tmproj
-*.tmproject
-tmtags
+# Sublime
+*.sublime-project
+*.sublime-workspace
+
+# Deployment
+dandelion.yml
+
+
